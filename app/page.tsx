@@ -4,61 +4,43 @@ import { socialLinks } from "./config";
 export default function Page() {
   return (
     <section>
-      <a href={socialLinks.twitter} target="_blank">
-        <Image
-          src="/profile.png"
-          alt="Profile photo"
-          className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0"
-          unoptimized
-          width={160}
-          height={160}
-          priority
-        />
-      </a>
-      <h1 className="mb-8 text-2xl font-medium">
-        Portfolio template!
+      <Image
+        src="/profile.png"
+        alt="Foto de perfil"
+        className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0"
+        unoptimized
+        width={160}
+        height={160}
+        priority
+      />
+      <h1 className="mb-8 text-3xl font-bold">
+        ¡Hola! Soy Talisman 
       </h1>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-          A clean, fast, and lightweight portfolio template built with Next.js,
-          Vercel, and Tailwind CSS.
+          Soy un desarrollador full-stack con una fuerte orientación hacia la ciberseguridad, el bug hunting, y la creación de herramientas con impacto real.
         </p>
         <p>
-          Nextfolio has everything you need for a portfolio: MDX blog, SEO, RSS,
-          Atom & JSON feeds, analytics, Tweet & YouTube embeds, KaTeX and {""}
-          <a
-            target="_blank"
-            href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
-          >
-            more
-          </a>
-          .
+          Desde enero de 2023 vengo aprendiendo programación y ciberseguridad de forma intensiva. Comencé en la academia Hola Mundo y seguí perfeccionándome de forma autodidacta.
         </p>
         <p>
-          Nextfolio is{" "}
-          <a href={socialLinks.github} target="_blank">
-            open-source
-          </a>{" "}
-          and fully customizable, making it easy to add more features.
+          Manejo tecnologías como <strong>JavaScript, TypeScript, Python, Node.js, Django, React, Docker, Git, GitHub, SQL</strong>, y tengo experiencia trabajando con <strong>Linux</strong>, incluyendo herramientas de pentesting como <code>wifite</code>, y distros como <strong>Kali y Arch (EndeavourOS)</strong>.
         </p>
         <p>
-          <a
-            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio"
-            target="_blank"
-          >
-            Deploy
-          </a>{" "}
-          your Nextfolio site with Vercel in minutes and follow the set up
-          instructions in the{" "}
-          <a href="/blog/getting-started">Getting Started</a> post.
+          También desarrollo proyectos que integran inteligencia artificial, meditación, técnicas de estudio como el Método Feynman, y organización personal. Mi objetivo es crear soluciones que ayuden a estudiar mejor, concentrarse más y desbloquear nuestro máximo potencial.
         </p>
         <p>
-          Built and maintained by{" "}
-          <a href="https://imsirius.xyz/" target="_blank">
-            Sirius
-          </a>
-          .
+          Actualmente estoy construyendo mi camino profesional en el mundo del <strong>bug hunting</strong>, desarrollando proyectos open source y preparando contenido para <strong>YouTube</strong>.
         </p>
+        <p>
+          Este portfolio es parte de ese camino. 🚀
+        </p>
+        <a
+          href="/projects"
+          className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+        >
+          Ver mis proyectos
+        </a>
       </div>
     </section>
   );
