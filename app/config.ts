@@ -3,6 +3,7 @@ export const metaData = {
   title: "⚔",
   name: "Talisman",
   ogImage: "/opengraph-image.png",
+  description: "Portfolio personal de Talisman. Programador y hacker ético en formación." // <- aquí puedes poner lo que quieras
 };
 
 export const socialLinks = {
