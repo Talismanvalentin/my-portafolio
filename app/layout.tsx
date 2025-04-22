@@ -6,7 +6,14 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
 import { Providers } from './providers'
-import { metaData } from "./config";
+
+export const metaData = {
+  baseUrl: "https://example.com",
+  title: "My Portfolio",
+  name: "Portfolio",
+  ogImage: "/og-image.png",
+  description: "This is my portfolio website.", // Added description property
+};
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,10 +43,7 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  twitter: {
-    title: metaData.name,
-    card: "summary_large_image",
+
   },
   icons: {
     icon: "/favicon.ico",

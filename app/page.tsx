@@ -1,5 +1,15 @@
+// app/page.tsx
+
 import Image from "next/image";
-import { socialLinks } from "./config";
+import { metaData } from "../constants/meta";
+
+export const metadata = {
+  title: `🚀 ${metaData.title}`,
+  description: "Portafolio de Talisman – Full-stack developer y cyberpunk de la programación.",
+  openGraph: {
+    images: [metaData.ogImage],
+  },
+};
 
 export default function Page() {
   return (
@@ -13,34 +23,49 @@ export default function Page() {
         height={160}
         priority
       />
-      <h1 className="mb-8 text-3xl font-bold">
-        ¡Hola! Soy Talisman 
+
+
+
+      {/* Saludo principal */}
+      <h1 className="mb-8 text-3xl md:text-5xl font-bold text-left">
+        ¡Hola! Soy {metaData.name}
       </h1>
-      <div className="prose prose-neutral dark:prose-invert">
+
+      {/* Descripción */}
+      <div className="prose prose-neutral dark:prose-invert max-w-none">
         <p>
-          Soy un desarrollador full-stack con una fuerte orientación hacia la ciberseguridad, el bug hunting, y la creación de herramientas con impacto real.
+          Soy un desarrollador full-stack con una fuerte orientación hacia la
+          ciberseguridad, el bug hunting, y la creación de herramientas con
+          impacto real.
         </p>
         <p>
-          Desde enero de 2023 vengo aprendiendo programación y ciberseguridad de forma intensiva. Comencé en la academia Hola Mundo y seguí perfeccionándome de forma autodidacta.
+          Desde enero de 2023 vengo aprendiendo programación y ciberseguridad
+          de forma intensiva. Comencé en la academia Hola Mundo y seguí
+          perfeccionándome de forma autodidacta.
         </p>
         <p>
-          Manejo tecnologías como <strong>JavaScript, TypeScript, Python, Node.js, Django, React, Docker, Git, GitHub, SQL</strong>, y tengo experiencia trabajando con <strong>Linux</strong>, incluyendo herramientas de pentesting como <code>wifite</code>, y distros como <strong>Kali y Arch (EndeavourOS)</strong>.
+          Manejo tecnologías como{" "}
+          <strong>
+            JavaScript, TypeScript, Python, Node.js, Django, React, Docker,
+            Git, GitHub, SQL
+          </strong>
+          , y tengo experiencia trabajando con <strong>Linux</strong>,
+          incluyendo herramientas de pentesting como <code>wifite</code>, y
+          distros como <strong>Kali y Arch (EndeavourOS)</strong>.
         </p>
         <p>
-          También desarrollo proyectos que integran inteligencia artificial, meditación, técnicas de estudio como el Método Feynman, y organización personal. Mi objetivo es crear soluciones que ayuden a estudiar mejor, concentrarse más y desbloquear nuestro máximo potencial.
+          También desarrollo proyectos que integran inteligencia artificial,
+          meditación, técnicas de estudio como el Método Feynman, y organización
+          personal. Mi objetivo es crear soluciones que ayuden a estudiar
+          mejor, concentrarse más y desbloquear nuestro máximo potencial.
         </p>
         <p>
-          Actualmente estoy construyendo mi camino profesional en el mundo del <strong>bug hunting</strong>, desarrollando proyectos open source y preparando contenido para <strong>YouTube</strong>.
+          Actualmente estoy construyendo mi camino profesional en el mundo del{" "}
+          <strong>bug hunting</strong>, desarrollando proyectos open source y
+          preparando contenido para <strong>YouTube</strong>.
         </p>
-        <p>
-          Este portfolio es parte de ese camino. 🚀
-        </p>
-        <a
-          href="/projects"
-          className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-        >
-          Ver mis proyectos
-        </a>
+        <p>Este portfolio es parte de ese camino. 🚀</p>
+
       </div>
     </section>
   );
