@@ -1,0 +1,75 @@
+.
+├── app
+│   ├── blog
+│   │   ├── page.tsx
+│   │   └── [slug]
+│   │       └── page.tsx
+│   ├── components
+│   │   ├── caption.tsx
+│   │   ├── footer.tsx
+│   │   ├── image-grid.tsx
+│   │   ├── mdx.tsx
+│   │   ├── nav.tsx
+│   │   ├── theme-switch.tsx
+│   │   ├── tweet.css
+│   │   ├── tweet.tsx
+│   │   └── youtube.tsx
+│   ├── config.ts
+│   ├── error.tsx
+│   ├── feed
+│   │   └── [format]
+│   │       └── route.ts
+│   ├── global.css
+│   ├── layout.tsx
+│   ├── lib
+│   │   └── posts.ts
+│   ├── not-found.tsx
+│   ├── og
+│   │   └── route.tsx
+│   ├── page.tsx
+│   ├── photos
+│   │   └── page.tsx
+│   ├── projects
+│   │   ├── page.tsx
+│   │   └── project-data.tsx
+│   ├── providers.tsx
+│   ├── robots.ts
+│   └── sitemap.ts
+├── constants
+│   └── meta.ts
+├── content
+│   ├── custom-mdx-examples.mdx
+│   └── getting-started.mdx
+├── estructura-proyecto.txt
+├── .gitignore
+├── LICENSE
+├── next.config.ts
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── pages
+├── pnpm-lock.yaml
+├── postcss.config.js
+├── public
+│   ├── dark-mode-demo.png
+│   ├── favicon.ico
+│   ├── icon
+│   │   ├── icons8-ajedrez-100.png
+│   │   └── icons8-ajedrez-50.png
+│   ├── light-mode-demo.png
+│   ├── logo.png
+│   ├── opengraph-image.png
+│   ├── photos
+│   │   ├── photo1.jpg
+│   │   ├── photo2.jpg
+│   │   ├── photo3.jpg
+│   │   ├── photo4.jpg
+│   │   ├── photo5.jpg
+│   │   └── photo6.jpg
+│   ├── profile.png
+│   └── sword.svg
+├── README.md
+├── tailwind.config.js
+└── tsconfig.json
+
+17 directories, 56 files

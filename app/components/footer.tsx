@@ -40,8 +40,8 @@ export default function Footer() {
       <time>© {YEAR}</time>{" "}
       <span className="text-xs font-mono text-gray-500">
         {metaData.name} -{" "}
-        <a href="/">{metaData.name}</a>
       </span>
+
       <SocialLinks />
     </small>
   );
