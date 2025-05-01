@@ -7,29 +7,29 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
 import { Providers } from './providers'
 
-export const metaData = {
+// Configuración de metadatos
+const metaDataConfig = {
   baseUrl: "https://example.com",
   title: "My Portfolio",
   name: "Portfolio",
   ogImage: "/og-image.png",
-  description: "This is my portfolio website.", // Added description property
+  description: "This is my portfolio website.",
 };
 
-const inter = Inter({ subsets: ["latin"] });
-
+// Configuración del metadata conforme a las normas de Next.js
 export const metadata: Metadata = {
-  metadataBase: new URL(metaData.baseUrl),
+  metadataBase: new URL(metaDataConfig.baseUrl),
   title: {
-    default: metaData.title,
-    template: `%s | ${metaData.title}`,
+    default: metaDataConfig.title,
+    template: `%s | ${metaDataConfig.title}`,
   },
-  description: metaData.description,
+  description: metaDataConfig.description,
   openGraph: {
-    images: metaData.ogImage,
-    title: metaData.title,
-    description: metaData.description,
-    url: metaData.baseUrl,
-    siteName: metaData.name,
+    images: metaDataConfig.ogImage,
+    title: metaDataConfig.title,
+    description: metaDataConfig.description,
+    url: metaDataConfig.baseUrl,
+    siteName: metaDataConfig.name,
     locale: "en_US",
     type: "website",
   },
@@ -43,14 +43,15 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-
   },
   icons: {
     icon: "/favicon.ico",
   },
 };
 
-const cx = (...classes) => classes.filter(Boolean).join(" ");
+const inter = Inter({ subsets: ["latin"] });
+
+const cx = (...classes: string[]) => classes.filter(Boolean).join(" ");
 
 export default function RootLayout({
   children,
@@ -58,7 +59,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // ⚠️ Agregado suppressHydrationWarning en <html> para evitar errores de hidratación con ThemeProvider (p.ej. cambio de tema dinámico)
     <html lang="en" className={`${inter.className}`} suppressHydrationWarning>
       <head>
         <link
