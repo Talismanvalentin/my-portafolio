@@ -15,6 +15,9 @@ export default function DashboardPage() {
         <li><a href="https://bugcrowd.com/talismanvalentin" target="_blank" rel="noopener noreferrer">Bugcrowd</a></li>
         <li><a href="https://portswigger.net/web-security/dashboard" target="_blank" rel="noopener noreferrer">PortSwingger</a></li>
       </ul>
+      <span className="bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded-full">
+        🚧 Este Dashboard está en desarrollo. ¡Pronto más contenido!
+      </span>
     </section>
   );
 }
