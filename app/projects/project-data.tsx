@@ -7,15 +7,10 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Mithril AI",
-    year: 2024,
-    description: "Open science AI resarch lab",
-    url: "https://github.com/mithrilai",
-  },
-  {
-    title: "OpenDeepLearning",
+    title: "YouTubeConverter",
     year: 2023,
-    description: "Open source AI education resources",
-    url: "https://opendeeplearning.xyz/",
+    description: "Herramienta CLI para descargar y convertir videos de YouTube a formatos como MP3 y MP4, con opciones personalizables para usuarios avanzados",
+    url: "https://github.com/Talismanvalentin/YoutubeConverter",
   },
+
 ];

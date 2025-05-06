@@ -1,11 +1,9 @@
-// app/page.tsx
-
 import Image from "next/image";
 import { metaData } from "../constants/meta";
 
 export const metadata = {
   title: `🚀 ${metaData.title}`,
-  description: "Portafolio de Talisman – Full-stack developer y cyberpunk de la programación.",
+  description: "Portafolio de Talisman – Full-stack developer con enfoque en ciberseguridad y bug hunting.",
   openGraph: {
     images: [metaData.ogImage],
   },
@@ -24,8 +22,6 @@ export default function Page() {
         priority
       />
 
-
-
       {/* Saludo principal */}
       <h1 className="mb-8 text-3xl md:text-5xl font-bold text-left">
         ¡Hola! Soy {metaData.name}
@@ -34,39 +30,28 @@ export default function Page() {
       {/* Descripción */}
       <div className="prose prose-neutral dark:prose-invert max-w-none">
         <p>
-          Soy un desarrollador full-stack con una fuerte orientación hacia la
-          ciberseguridad, el bug hunting, y la creación de herramientas con
-          impacto real.
+          Soy un desarrollador full-stack y entusiasta de la ciberseguridad con un enfoque profesional en el <strong>bug hunting</strong>. Combino habilidades técnicas sólidas con un interés profundo en cómo aprendemos, estudiamos y nos desarrollamos como individuos.
         </p>
         <p>
-          Desde enero de 2023 vengo aprendiendo programación y ciberseguridad
-          de forma intensiva. Comencé en la academia Hola Mundo y seguí
-          perfeccionándome de forma autodidacta.
+          Desde 2023 me he dedicado intensamente a aprender programación, hacking ético y pentesting. Domino tecnologías como{" "}
+          <strong>JavaScript, TypeScript, Python, Node.js, Django, React, Docker, SQL, Git</strong>, y manejo fluido de <strong>Linux</strong> con distros como Kali y Arch (EndeavourOS).
         </p>
         <p>
-          Manejo tecnologías como{" "}
-          <strong>
-            JavaScript, TypeScript, Python, Node.js, Django, React, Docker,
-            Git, GitHub, SQL
-          </strong>
-          , y tengo experiencia trabajando con <strong>Linux</strong>,
-          incluyendo herramientas de pentesting como <code>wifite</code>, y
-          distros como <strong>Kali y Arch (EndeavourOS)</strong>.
+          Me formé en la academia Hola Mundo y amplié mis estudios de forma autodidacta con plataformas como Hack The Box, HackerRank, Brilliant, CodeCrafters, PortSwigger Academy y más.
         </p>
         <p>
-          También desarrollo proyectos que integran inteligencia artificial,
-          meditación, técnicas de estudio como el Método Feynman, y organización
-          personal. Mi objetivo es crear soluciones que ayuden a estudiar
-          mejor, concentrarse más y desbloquear nuestro máximo potencial.
+          También me intereso por la <strong>psicología del aprendizaje</strong>, el <strong>estado de flow</strong>, la <strong>meditación aplicada al estudio</strong> y técnicas como el <strong>Método Feynman</strong>, buscando mejorar no solo qué aprendo, sino cómo lo aprendo.
         </p>
         <p>
-          Actualmente estoy construyendo mi camino profesional en el mundo del{" "}
-          <strong>bug hunting</strong>, desarrollando proyectos open source y
-          preparando contenido para <strong>YouTube</strong>.
+          Actualmente me especializo en <strong>bug hunting</strong> y seguridad ofensiva, combinando mis estudios técnicos con una visión de crecimiento personal y autodisciplina. Este portfolio forma parte de ese camino. 🚀
         </p>
-        <p>Este portfolio es parte de ese camino. 🚀</p>
-
+      </div>
+      <div>
+        <span className="bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded-full">
+          🚧 Este portafolio está en desarrollo. ¡Pronto más contenido!
+        </span>
       </div>
     </section>
+
   );
 }
