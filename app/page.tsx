@@ -30,7 +30,7 @@ export default function Page() {
       {/* Descripción */}
       <div className="prose prose-neutral dark:prose-invert max-w-none">
         <p>
-          Soy un desarrollador full-stack y entusiasta de la ciberseguridad con un enfoque profesional en el <strong>bug hunting</strong>. Combino habilidades técnicas sólidas con un interés profundo en cómo aprendemos, estudiamos y nos desarrollamos como individuos.
+          Soy un "Developer by Day, Ethical Hacker by Night" desarrollador full-stack y entusiasta de la ciberseguridad con un enfoque profesional en el <strong>bug hunting</strong>. Combino habilidades técnicas sólidas con un interés profundo en cómo aprendemos, estudiamos y nos desarrollamos como individuos.
         </p>
         <p>
           Desde 2023 me he dedicado intensamente a aprender programación, hacking ético y pentesting. Domino tecnologías como{" "}

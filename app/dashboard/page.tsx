@@ -1,23 +1,78 @@
-// app/dashboard/page.tsx
+import Image from "next/image";
+
+const platforms = [
+  {
+    name: "Hack The Box",
+    icon: "/icon/hack-the-box.svg",
+    url: "https://app.hackthebox.com/profile/2019543",
+  },
+  {
+    name: "Duolingo",
+    icon: "/icon/duolingo.webp",
+    url: "https://www.duolingo.com/profile/TalismanVe",
+  },
+  {
+    name: "HackerRank",
+    icon: "/icon/hackerrank.png",
+    url: "https://www.hackerrank.com/profile/talmeireles101",
+  },
+  {
+    name: "CodeCrafters",
+    icon: "/icon/Codecraftes.webp",
+    url: "https://app.codecrafters.io/users/Talismanvalentin",
+  },
+  {
+    name: "Brilliant",
+    icon: "/icon/brilliant.webp",
+    url: "https://brilliant.org",
+  },
+  {
+    name: "HackerOne",
+    icon: "/icon/hackerone.svg",
+    url: "https://hackerone.com/talismanvalentin",
+  },
+  {
+    name: "Bugcrowd",
+    icon: "/icon/bugcrowd-svgrepo-com.svg",
+    url: "https://bugcrowd.com/talismanvalentin",
+  },
+  {
+    name: "PortSwigger",
+    icon: "/icon/burp-suite-icon.webp",
+    url: "https://portswigger.net/web-security/dashboard",
+  },
+];
 
 export default function DashboardPage() {
   return (
-    <section className="space-y-4">
-      <h1 className="text-2xl font-bold">📊 Plataformas de Estudio</h1>
-      <ul className="list-disc pl-5">
-        <li><a href="https://app.hackthebox.com" target="_blank" rel="noopener noreferrer">Hack The Box</a></li>
-        <li><a href="https://academy.hackthebox.com" target="_blank" rel="noopener noreferrer">HTB Academy</a></li>
-        <li><a href="https://duolingo.com" target="_blank" rel="noopener noreferrer">Duolingo</a></li>
-        <li><a href="https://www.hackerrank.com" target="_blank" rel="noopener noreferrer">HackerRank</a></li>
-        <li><a href="https://app.codecrafters.io" target="_blank" rel="noopener noreferrer">CodeCrafters</a></li>
-        <li><a href="https://brilliant.org" target="_blank" rel="noopener noreferrer">Brilliant</a></li>
-        <li><a href="https://hackerone.com/talismanvalentin" target="_blank" rel="noopener noreferrer">HackerOne</a></li>
-        <li><a href="https://bugcrowd.com/talismanvalentin" target="_blank" rel="noopener noreferrer">Bugcrowd</a></li>
-        <li><a href="https://portswigger.net/web-security/dashboard" target="_blank" rel="noopener noreferrer">PortSwingger</a></li>
-      </ul>
-      <span className="bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded-full">
+    <section className="space-y-6">
+      <h1 className="text-3xl font-bold text-white">📊 Plataformas de Estudio</h1>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        {platforms.map((platform) => (
+          <a
+            key={platform.name}
+            href={platform.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center bg-zinc-800 hover:bg-zinc-700 transition-all p-4 rounded-xl shadow-md hover:scale-105"
+          >
+            <Image
+              src={platform.icon}
+              alt={platform.name}
+              width={50}
+              height={50}
+              className="rounded bg-white p-1"
+            />
+            <span className="mt-2 text-sm text-white text-center">{platform.name}</span>
+          </a>
+        ))}
+      </div>
+
+      <span className="bg-yellow-200 text-yellow-800 text-xs font-bold px-3 py-1 rounded-full inline-block">
         🚧 Este Dashboard está en desarrollo. ¡Pronto más contenido!
       </span>
     </section>
   );
 }
+
