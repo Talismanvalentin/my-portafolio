@@ -33,12 +33,12 @@ const platforms = [
   {
     name: "HackerOne",
     icon: "/icon/hackerone.svg",
-    url: "https://hackerone.com/talismanvalentin",
+    url: "https://hackerone.com/swadowamulet",
   },
   {
     name: "Bugcrowd",
     icon: "/icon/bugcrowd-svgrepo-com.svg",
-    url: "https://bugcrowd.com/talismanvalentin",
+    url: "https://bugcrowd.com/CodeRonin",
   },
   {
     name: "PortSwigger",
@@ -63,13 +63,33 @@ const certificates = [
   "Talisman Verdun - 2024-11-22.pdf",
 ];
 
+// Nueva lista de writeups de CTF
+const writeups = [
+  {
+    title: "Writeup 1",
+    link: "https://example.com/writeup1",
+  },
+  {
+    title: "Writeup 2",
+    link: "https://example.com/writeup2",
+  },
+  {
+    title: "Writeup 3",
+    link: "https://example.com/writeup3",
+  },
+  // Agrega más writeups según sea necesario
+];
+
 export default function DashboardPage() {
   const [isAccordionOpen, setIsAccordionOpen] = useState(false);
+  const [isCTFAccordionOpen, setIsCTFAccordionOpen] = useState(false);
 
   return (
     <section className="space-y-6">
       {/* Título de la sección de plataformas de estudio */}
-      <h1 className="text-3xl font-bold text-white">📊 Plataformas de Estudio</h1>
+      <h1 className="text-3xl font-bold text-white">
+        📊 Plataformas de Estudio
+      </h1>
 
       {/* Contenedor en formato grid para mostrar las plataformas */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
@@ -91,7 +111,9 @@ export default function DashboardPage() {
               className="rounded bg-white p-1" // Estilos para la imagen
             />
             {/* Nombre de la plataforma */}
-            <span className="mt-2 text-sm text-white text-center">{platform.name}</span>
+            <span className="mt-2 text-sm text-white text-center">
+              {platform.name}
+            </span>
           </a>
         ))}
       </div>
@@ -112,7 +134,9 @@ export default function DashboardPage() {
               {/* Recorre la lista de archivos de certificados */}
               {certificates.map((fileName) => {
                 // Formatea el título del certificado quitando la extensión y reemplazando guiones por espacios
-                const title = fileName.replace(/\.(pdf|jpg)/i, "").replace(/-/g, " ");
+                const title = fileName
+                  .replace(/\.(pdf|jpg)/i, "")
+                  .replace(/-/g, " ");
                 // Verifica si el archivo es una imagen (JPG)
                 const isImage = fileName.toLowerCase().endsWith(".jpg");
                 const filePath = `/photos/${fileName}`;
@@ -123,7 +147,9 @@ export default function DashboardPage() {
                     className="bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 p-4 rounded-2xl shadow-xl hover:scale-[1.02] transition-transform duration-200"
                   >
                     {/* Título del certificado */}
-                    <h3 className="text-white text-sm font-semibold mb-3 text-center">{title}</h3>
+                    <h3 className="text-white text-sm font-semibold mb-3 text-center">
+                      {title}
+                    </h3>
 
                     {/* Si es una imagen (JPG), se muestra como imagen con enlace */}
                     {isImage ? (
@@ -161,6 +187,42 @@ export default function DashboardPage() {
                   </div>
                 );
               })}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Nueva sección: Writeups de Capture the Flag */}
+      <div className="mt-10 space-y-4">
+        <h2 className="text-2xl font-bold text-white">🏴 Writeups de CTF</h2>
+        <div>
+          <button
+            onClick={() => setIsCTFAccordionOpen(!isCTFAccordionOpen)}
+            className="w-full text-left bg-zinc-800 text-white p-4 rounded-lg shadow-md hover:bg-zinc-700 transition-all"
+          >
+            {isCTFAccordionOpen ? "Ocultar Writeups" : "Mostrar Writeups"}
+          </button>
+          {isCTFAccordionOpen && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-4">
+              {/* Lista de writeups */}
+              {writeups.map((writeup) => (
+                <div
+                  key={writeup.title}
+                  className="bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 p-4 rounded-2xl shadow-xl hover:scale-[1.02] transition-transform duration-200"
+                >
+                  <h3 className="text-white text-sm font-semibold mb-3 text-center">
+                    {writeup.title}
+                  </h3>
+                  <a
+                    href={writeup.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-blue-400 hover:text-blue-300 underline block text-center"
+                  >
+                    Leer Writeup
+                  </a>
+                </div>
+              ))}
             </div>
           )}
         </div>
